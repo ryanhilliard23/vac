@@ -1,0 +1,2358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1298</width>
+    <height>709</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1298</width>
+    <height>709</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1298</width>
+    <height>709</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: #0f0f10;</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="sidebar_2" native="true">
+      <property name="font">
+       <font>
+        <family>Manrope SemiBold</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(15, 15, 16);</string>
+      </property>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>100</y>
+         <width>1301</width>
+         <height>611</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Manrope SemiBold</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;</string>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="download_page">
+        <property name="styleSheet">
+         <string notr="true">background-color: #0f0f10;</string>
+        </property>
+        <widget class="QFrame" name="inputContainer">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>10</y>
+           <width>941</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>80</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/* 1. THE CONTAINER (The visual &quot;Card&quot;) */
+QFrame#inputContainer {
+    /* Dark glass-like background */
+    background-color: #1c1c1e; 
+    /* Subtle border */
+    border: 1px solid rgba(255, 255, 255, .08); 
+    /* Rounded corners */
+    border-radius: 12px; 
+}
+
+/* Hover Effect: The Blue Glow */
+QFrame#inputContainer:hover {
+    border: 2px solid rgb(59, 130, 246); /* Blue-ish border */
+    background-color: rgb(30, 30, 35);
+}
+
+/* 2. THE INPUT FIELD (The &quot;Invisible&quot; Text Layer) */
+QLineEdit#urlInput {
+    /* CRITICAL: Removes the &quot;box&quot; look */
+    background: transparent; 
+    border: none; 
+    
+    /* Typography */
+    color: #E5E7EB; /* Gray-200 */
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 500;
+    
+    /* Spacing inside the text area */
+    padding: 14px 10px; 
+}
+
+/* 3. THE PASTE BUTTON (Integrated Pill) */
+QPushButton#pasteBtn {
+    background-color: #1F1F23;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #9CA3AF; /* Gray-400 */
+    font-weight: bold;
+    font-size: 10px;
+    
+    /* Sizing */
+    min-width: 60px;
+    height: 24px;
+    
+    /* Position it away from the edges */
+    margin-right: 12px;
+    margin-left: 5px;
+}
+
+/* Button Hover */
+QPushButton#pasteBtn:hover {
+    background-color: #3B82F6; /* Primary Blue */
+    color: white;
+    border: none;
+}
+
+/* 4. THE ICON (Link Symbol) */
+QLabel#iconLabel {
+    background: transparent;
+    border: none;
+    color: #6B7280; /* Gray-500 */
+    
+    /* Spacing from left edge */
+    padding-left: 15px;
+    padding-right: 5px;
+    
+    /* Size */
+    qproperty-alignment: 'AlignCenter';
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="iconLabel">
+            <property name="font">
+             <font>
+              <family>Manrope SemiBold</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: transparent;
+color: white;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="resources.qrc">:/images/link-simple.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="urlInput">
+            <property name="font">
+             <font>
+              <family>Manrope</family>
+              <pointsize>-1</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font: 18px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Paste or Enter Link</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pasteBtn">
+            <property name="font">
+             <font>
+              <pointsize>-1</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #2c2c2e;
+border-radius: 7px;
+color: white;
+</string>
+            </property>
+            <property name="text">
+             <string>PASTE</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnAddQueue">
+            <property name="font">
+             <font>
+              <family>Inter</family>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(54, 123, 239);
+border-radius: 7px;
+
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QFrame" name="metadata_placeholder">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>100</y>
+           <width>941</width>
+           <height>1</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #1c1c1e;
+border-radius: 16px;
+border: 1px solid #2c2c2e;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+        <widget class="QFrame" name="main_frame">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>100</y>
+           <width>961</width>
+           <height>421</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+outline: none;
+border: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QFrame" name="main_container">
+              <property name="styleSheet">
+               <string notr="true">background-color: transparent;
+outline: none;
+border: none;</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QFrame" name="option_container">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>661</width>
+                 <height>225</height>
+                </rect>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">#option_container {
+    background-color: transparent; /* Keep trying to be transparent */
+    border-bottom-left-radius: 15px; /* Match the parent's radius */
+    border-bottom-right-radius: 15px; /* Match the parent's radius */
+}</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="format_qual_frame">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>10</y>
+                  <width>641</width>
+                  <height>191</height>
+                 </rect>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>318</width>
+                  <height>179</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #1c1c1e;
+border-radius: 16px;
+border: 1px solid #2c2c2e;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QPushButton" name="btnFormatVideo">
+                 <property name="geometry">
+                  <rect>
+                   <x>15</x>
+                   <y>70</y>
+                   <width>132</width>
+                   <height>112</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope,sans-serif</family>
+                   <pointsize>-1</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="layoutDirection">
+                  <enum>Qt::LeftToRight</enum>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">/* --- Video &amp; Audio Toggle Buttons --- */
+QPushButton#btnFormatVideo, QPushButton#btnFormatAudio {
+    background-color: #0F0F12;        /* matches bg-surface */
+    border: 1px solid #2A2A30;        /* matches border-white/5 */
+    border-radius: 12px;              /* matches rounded-xl */
+    color: #9ca3af;                   /* matches text-gray-400 */
+    font-family: &quot;Manrope&quot;, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;                    /* spacious padding like the card */
+    qproperty-iconSize: 24px 24px;    /* makes the icon larger (text-2xl) */
+}
+
+/* --- Hover State --- */
+QPushButton#btnFormatVideo:hover, QPushButton#btnFormatAudio:hover {
+    background-color: #1A1A1F;        /* matches hover:bg-white/5 */
+    border: 1px solid #3f3f46;        /* slightly lighter border */
+    color: #ffffff;
+}
+
+/* --- Active / Checked State (The Blue Look) --- */
+/* This mimics the &quot;Video&quot; active state in your HTML */
+QPushButton#btnFormatVideo:checked, QPushButton#btnFormatAudio:checked {
+    background-color: rgba(59, 130, 246, 0.15); /* Blue tint (bg-primary/10) */
+    border: 1px solid rgba(59, 130, 246, 0.5);  /* Blue border (border-primary/50) */
+    color: #ffffff;                             /* White text */
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Video</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="btnFormatAudio">
+                 <property name="geometry">
+                  <rect>
+                   <x>165</x>
+                   <y>70</y>
+                   <width>132</width>
+                   <height>112</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope,sans-serif</family>
+                   <pointsize>-1</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">/* --- Video &amp; Audio Toggle Buttons --- */
+QPushButton#btnFormatVideo, QPushButton#btnFormatAudio {
+    background-color: #0F0F12;        /* matches bg-surface */
+    border: 1px solid #2A2A30;        /* matches border-white/5 */
+    border-radius: 12px;              /* matches rounded-xl */
+    color: #9ca3af;                   /* matches text-gray-400 */
+    font-family: &quot;Manrope&quot;, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;                    /* spacious padding like the card */
+    qproperty-iconSize: 24px 24px;    /* makes the icon larger (text-2xl) */
+}
+
+/* --- Hover State --- */
+QPushButton#btnFormatVideo:hover, QPushButton#btnFormatAudio:hover {
+    background-color: #1A1A1F;        /* matches hover:bg-white/5 */
+    border: 1px solid #3f3f46;        /* slightly lighter border */
+    color: #ffffff;
+}
+
+/* --- Active / Checked State (The Blue Look) --- */
+/* This mimics the &quot;Video&quot; active state in your HTML */
+QPushButton#btnFormatVideo:checked, QPushButton#btnFormatAudio:checked {
+    background-color: rgba(59, 130, 246, 0.15); /* Blue tint (bg-primary/10) */
+    border: 1px solid rgba(59, 130, 246, 0.5);  /* Blue border (border-primary/50) */
+    color: #ffffff;                             /* White text */
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Audio</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="logo_text_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>40</y>
+                   <width>101</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope SemiBold</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: #6B7280;
+border: none;
+outline: none;</string>
+                 </property>
+                 <property name="text">
+                  <string>FORMAT</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="mp3_icon">
+                 <property name="geometry">
+                  <rect>
+                   <x>180</x>
+                   <y>90</y>
+                   <width>21</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope SemiBold</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: white;
+border: none;
+outline: none;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resources.qrc">:/images/waveform-active.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="mp4_icon">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>90</y>
+                   <width>21</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope SemiBold</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: white;
+border: none;
+outline: none;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resources.qrc">:/images/film-active.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="logo_text_7">
+                 <property name="geometry">
+                  <rect>
+                   <x>32</x>
+                   <y>133</y>
+                   <width>21</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: #4B5563;
+border: none;</string>
+                 </property>
+                 <property name="text">
+                  <string>MP4</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="logo_text_8">
+                 <property name="geometry">
+                  <rect>
+                   <x>180</x>
+                   <y>130</y>
+                   <width>21</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: #4B5563;
+border: none;</string>
+                 </property>
+                 <property name="text">
+                  <string>MP3</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="logo_text_6">
+                 <property name="geometry">
+                  <rect>
+                   <x>330</x>
+                   <y>40</y>
+                   <width>101</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope SemiBold</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: #6B7280;
+outline: none;
+border: none;</string>
+                 </property>
+                 <property name="text">
+                  <string>QUALITY</string>
+                 </property>
+                </widget>
+                <widget class="QComboBox" name="comboQuality">
+                 <property name="geometry">
+                  <rect>
+                   <x>330</x>
+                   <y>70</y>
+                   <width>281</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope,sans-serif</family>
+                   <pointsize>-1</pointsize>
+                   <weight>62</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">/* --- QComboBox Base Style --- */
+QComboBox {
+    background-color: #0F0F12;      /* matches bg-surface */
+    border: 1px solid #2A2A30;      /* matches border-white/5 */
+    border-radius: 12px;            /* matches rounded-xl */
+    padding: 10px 16px;             /* matches py-3 px-4 */
+    color: #9ca3af;                 /* matches text-gray-400 */
+    font-family: &quot;Manrope&quot;, sans-serif;
+    font-size: 13px;                /* matches text-sm */
+    font-weight: 500;
+}
+
+/* --- Hover State --- */
+QComboBox:hover {
+    background-color: #1A1A1F;      /* matches hover:bg-surfaceHighlight */
+    color: #ffffff;                 /* lighter text on hover */
+    border: 1px solid #3f3f46;
+}
+
+/* --- Focus / Open State --- */
+QComboBox:on { 
+    border: 1px solid rgba(59, 130, 246, 0.5); /* matches focus:border-primary/50 */
+    background-color: #0F0F12;
+}
+
+/* --- The Dropdown Button Area --- */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 40px; 
+    border-left-width: 0px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background: transparent;        /* Keep transparent to show parent bg */
+}
+
+/* --- The Arrow Icon --- */
+/* Note: You need a PNG icon in your resource file for this to look perfect.
+   If you don't have one, Qt uses a default Windows arrow. */
+QComboBox::down-arrow {
+    image: url(:/images/caret-down.png); /* Replace with your actual resource path */
+    width: 14px;
+    height: 14px;
+    padding-right: 16px; /* Offset to match the HTML look */
+}
+
+/* --- The Popup List (The part that opens up) --- */
+QComboBox QAbstractItemView {
+    background-color: #0F0F12;      /* Dark background */
+    border: 1px solid #2A2A30;      /* Thin border */
+    selection-background-color: #1A1A1F; /* Hovered Item Background */
+    selection-color: #ffffff;       /* Hovered Item Text */
+    outline: 0px;                   /* Remove dotted selection line */
+    padding: 4px;
+    border-radius: 8px;
+    color: #9ca3af;
+}</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>4k</string>
+                  </property>
+                 </item>
+                </widget>
+                <widget class="QLabel" name="logo_text_10">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>13</y>
+                   <width>231</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope SemiBold</family>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: #9CA3AF;
+outline: none;
+border: none;</string>
+                 </property>
+                 <property name="text">
+                  <string>OUTPUT CONFIGURATION</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="mp4_icon_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>13</y>
+                   <width>21</width>
+                   <height>21</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope SemiBold</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: white;
+border: none;
+outline: none;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resources.qrc">:/images/control.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+              <widget class="QFrame" name="sys_prog_container">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>210</y>
+                 <width>661</width>
+                 <height>191</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="log_container">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>30</y>
+                  <width>641</width>
+                  <height>161</height>
+                 </rect>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>600</width>
+                  <height>150</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QTextEdit" name="consoleLog">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>10</y>
+                   <width>641</width>
+                   <height>151</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Consolas,Monaco,Courier New,monospace</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="cursor" stdset="0">
+                  <cursorShape>ArrowCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">/* 1. MAIN TEXT AREA STYLE */
+QTextEdit, QPlainTextEdit {
+    background-color: #1c1c1e;
+    border: 1px solid #2c2c2e; 
+    
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    padding: 10px;
+    color: #c8c8c8;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 10pt;
+}
+
+/* 2. NEW SCROLLBAR STYLE (Matches History Table) */
+QScrollBar:vertical {
+    border: none;
+    background: #0f0f12;
+    width: 14px;
+    margin: 15px 4px 15px 4px;
+}
+QScrollBar::handle:vertical {
+    background: #2A2A30;
+    min-height: 30px;
+    border-radius: 3px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #3f3f46;
+}
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar::add-page:vertical, 
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+</string>
+                 </property>
+                 <property name="horizontalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QFrame" name="frame_3">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>10</y>
+                  <width>641</width>
+                  <height>31</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(15, 15, 18);
+border: 1px solid #2c2c2e;
+
+/* Curve only the top */
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+/* Bottom stays straight */
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QLabel" name="logo_text_9">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>0</y>
+                   <width>111</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: #4B5563;
+border: none;</string>
+                 </property>
+                 <property name="text">
+                  <string>System Log</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="mp3_icon_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>6</x>
+                   <y>7</y>
+                   <width>19</width>
+                   <height>19</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Manrope SemiBold</family>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: transparent;
+color: white;
+border: none;
+outline: none;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="resources.qrc">:/images/terminal-window-fill.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </widget>
+              </widget>
+              <widget class="QFrame" name="download_container">
+               <property name="geometry">
+                <rect>
+                 <x>660</x>
+                 <y>0</y>
+                 <width>281</width>
+                 <height>401</height>
+                </rect>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>261</width>
+                 <height>401</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: transparent;
+outline: none;
+border: none;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QFrame" name="frame_4">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>10</y>
+                  <width>281</width>
+                  <height>291</height>
+                 </rect>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>250</width>
+                  <height>179</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: #1c1c1e;
+border-radius: 16px;
+border: 1px solid #2c2c2e;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QTableWidget" name="queue_table">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>40</y>
+                   <width>281</width>
+                   <height>251</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+border: none;
+outline: none;
+background-color: transparent;</string>
+                 </property>
+                </widget>
+                <widget class="QFrame" name="frame_5">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>281</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(15, 15, 18);
+border: 1px solid #2c2c2e;
+
+/* Curve only the top */
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+/* Bottom stays straight */
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="QLabel" name="download_queue">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>191</width>
+                    <height>21</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Manrope</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+color: #d1d5db;
+border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Conversion Queue</string>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="btnClearQueue">
+                  <property name="geometry">
+                   <rect>
+                    <x>248</x>
+                    <y>5</y>
+                    <width>31</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border: none;
+color: #3879e4;
+background-color: transparent;</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/images/trash-wh.png</normaloff>:/images/trash-wh.png</iconset>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+               <widget class="QPushButton" name="btnStartDownload">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>320</y>
+                  <width>281</width>
+                  <height>81</height>
+                 </rect>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Manrope,sans-serif</family>
+                  <pointsize>-1</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">/* --- Main Download Button (Gradient Style) --- */
+QPushButton#btnStartDownload {
+    /* Gradient Background: Matches 'bg-gradient-to-b from-primary to-blue-700' */
+    background-color: qlineargradient(
+        spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, 
+        stop:0 #3B82F6, 
+        stop:1 #1d4ed8
+    );
+    
+    /* Border &amp; Radius */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;  /* Matches 'rounded-2xl' */
+    
+    /* Text Styling */
+    color: white;
+    font-family: &quot;Manrope&quot;, sans-serif;
+    font-size: 18px;      /* Large text like the HTML &lt;h2&gt; */
+    font-weight: bold;
+    text-align: left;
+    /* Spacing */
+    padding: 20px;        /* Large padding to mimic the card size */
+}
+
+/* --- Hover State --- */
+QPushButton#btnStartDownload:hover {
+    /* Slightly lighter gradient to mimic the scale/glow effect */
+    background-color: qlineargradient(
+        spread:pad, x1:0.5, y1:0, x2:0.5, y2:1, 
+        stop:0 #60a5fa,   /* Lighter Blue */
+        stop:1 #2563eb    /* Blue-600 */
+    );
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Brighter border */
+}
+
+/* --- Pressed State --- */
+QPushButton#btnStartDownload:pressed {
+    /* Darker solid color or inverted gradient */
+    background-color: #1e40af; /* Blue-800 */
+    border: 1px solid transparent;
+    
+    /* Slight shift to mimic physical press */
+    padding-top: 22px;
+    padding-bottom: 18px;
+}
+
+/* --- Disabled State (Optional) --- */
+QPushButton#btnStartDownload:disabled {
+    background-color: #1A1A1F;
+    color: #52525b;
+    border: 1px solid #27272a;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Start
+Conversion</string>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>21</width>
+                  <height>21</height>
+                 </size>
+                </property>
+                <property name="shortcut">
+                 <string>Return</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+               <widget class="QLabel" name="label_2">
+                <property name="geometry">
+                 <rect>
+                  <x>220</x>
+                  <y>340</y>
+                  <width>51</width>
+                  <height>51</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgba(226, 228, 232, 40);
+border-radius: 25px;
+border: 1px solid white;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+               <widget class="QLabel" name="download_icon">
+                <property name="geometry">
+                 <rect>
+                  <x>235</x>
+                  <y>356</y>
+                  <width>21</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Manrope SemiBold</family>
+                  <pointsize>12</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+color: white;
+border: none;
+outline: none;</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="resources.qrc">:/images/download.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <zorder>main_frame</zorder>
+        <zorder>metadata_placeholder</zorder>
+        <zorder>inputContainer</zorder>
+       </widget>
+       <widget class="QWidget" name="history_page">
+        <widget class="QTableWidget" name="download_history_table">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>280</y>
+           <width>971</width>
+           <height>301</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Inter</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
+         </property>
+         <property name="autoScroll">
+          <bool>false</bool>
+         </property>
+         <property name="autoScrollMargin">
+          <number>16</number>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="tabKeyNavigation">
+          <bool>true</bool>
+         </property>
+         <property name="showDropIndicator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="dragDropOverwriteMode">
+          <bool>false</bool>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="textElideMode">
+          <enum>Qt::ElideMiddle</enum>
+         </property>
+         <property name="showGrid">
+          <bool>true</bool>
+         </property>
+         <property name="gridStyle">
+          <enum>Qt::NoPen</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>false</bool>
+         </property>
+         <attribute name="horizontalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>220</number>
+         </attribute>
+         <attribute name="horizontalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderCascadingSectionResizes">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderDefaultSectionSize">
+          <number>48</number>
+         </attribute>
+         <attribute name="verticalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+        </widget>
+        <widget class="QLineEdit" name="searchHistoryInput">
+         <property name="geometry">
+          <rect>
+           <x>820</x>
+           <y>200</y>
+           <width>311</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Manrope SemiBold</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	color: #9ca3af;
+	border-radius: 10px;
+	background-color: #1c1c1e;
+	border: 1px solid #2c2c2e;
+    padding-left: 30px;
+}
+
+QLineEdit::focus {
+	border: 2px solid #2563eb;
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Search archives...</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>830</x>
+           <y>210</y>
+           <width>18</width>
+           <height>18</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="resources.qrc">:/images/search.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnTotalDownloads">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>160</y>
+           <width>131</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>JetBrains Mono</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+border-radius: 5px;
+color: #8b919d;
+text-align: left;</string>
+         </property>
+         <property name="text">
+          <string>3 Items</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnHistoryTrash">
+         <property name="geometry">
+          <rect>
+           <x>780</x>
+           <y>200</y>
+           <width>36</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+border: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/trash-wh.png</normaloff>:/images/trash-wh.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QFrame" name="cards">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>0</y>
+           <width>971</width>
+           <height>131</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+border: none;
+outline: none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <property name="spacing">
+           <number>20</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="storage">
+            <property name="styleSheet">
+             <string notr="true">QFrame {
+    background-color: rgb(28, 28, 30);
+    border-radius: 12px;
+    border: 1px solid #45475a;
+    padding: 15px;
+}
+QFrame:hover {
+    border: 2px solid rgb(201, 215, 91)
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label_3">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>10</y>
+               <width>161</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Manrope</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;
+color: #6B7280;
+border: none;
+padding: 0px;</string>
+             </property>
+             <property name="text">
+              <string>TOTAL STORAGE</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="total_storage_label">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>40</y>
+               <width>111</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Manrope</family>
+               <pointsize>18</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+border: none;
+padding: 0px;</string>
+             </property>
+             <property name="text">
+              <string>48.5 GB</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_6">
+             <property name="geometry">
+              <rect>
+               <x>230</x>
+               <y>20</y>
+               <width>61</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+background-color: transparent;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resources.qrc">:/images/hard-drives-fill.png</pixmap>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="video_files">
+            <property name="styleSheet">
+             <string notr="true">QFrame {
+    background-color: rgb(28, 28, 30);
+    border-radius: 12px;
+    border: 1px solid #45475a;
+    padding: 15px;
+}
+QFrame:hover {
+    border: 2px solid rgb(59, 130, 246)
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label_5">
+             <property name="geometry">
+              <rect>
+               <x>230</x>
+               <y>20</y>
+               <width>61</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+background-color: transparent;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resources.qrc">:/images/film-active.png</pixmap>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_9">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>10</y>
+               <width>161</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Manrope</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;
+color: #6B7280;
+border: none;
+padding: 0px;</string>
+             </property>
+             <property name="text">
+              <string>VIDEO FILES</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="total_videos">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>40</y>
+               <width>111</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Manrope</family>
+               <pointsize>18</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+border: none;
+padding: 0px;</string>
+             </property>
+             <property name="text">
+              <string>125</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="audio_files">
+            <property name="styleSheet">
+             <string notr="true">QFrame {
+    background-color: rgb(28, 28, 30);
+    border-radius: 12px;
+    border: 1px solid #45475a;
+    padding: 15px;
+}
+QFrame:hover {
+    border: 2px solid rgb(129, 140, 248)
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label_7">
+             <property name="geometry">
+              <rect>
+               <x>240</x>
+               <y>20</y>
+               <width>61</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: none;
+background-color: transparent;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resources.qrc">:/images/waveform-active.png</pixmap>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_11">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>10</y>
+               <width>161</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Manrope</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;
+color: #6B7280;
+border: none;
+padding: 0px;</string>
+             </property>
+             <property name="text">
+              <string>AUDIO FILES</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="total_audios">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>40</y>
+               <width>111</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Manrope</family>
+               <pointsize>18</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+border: none;
+padding: 0px;</string>
+             </property>
+             <property name="text">
+              <string>512</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="Line" name="line">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>260</y>
+           <width>951</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(28, 28, 30);</string>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="logo_text_5">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>148</y>
+           <width>121</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Manrope ExtraBold</family>
+           <pointsize>24</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+color: white;</string>
+         </property>
+         <property name="text">
+          <string>Library</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="filter_container" native="true">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>190</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <widget class="QPushButton" name="btnVideo">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>10</y>
+            <width>81</width>
+            <height>36</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Manrope</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background-color: rgb(28, 28, 30);
+    color: #9ca3af; /* Gray-400 */
+    border: 1px solid rgba(255, 255, 255, 12); /* Subtle Border */
+    border-radius: 15px;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Manrope';
+}
+
+QPushButton:hover {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 50); /* Brighter border on hover */
+    background-color: #18181b;
+}
+
+QPushButton:pressed {
+    background-color: #27272a;
+}</string>
+          </property>
+          <property name="text">
+           <string>Video</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>14</width>
+            <height>14</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnAllMedia">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>81</width>
+            <height>36</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Manrope</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background-color: #3B82F6; /* Primary Blue */
+    color: white;
+    border: none;
+    border-radius: 15px; /* Fully rounded (Half of height approx) */
+    padding: 6px 16px;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Manrope';
+}
+
+QPushButton:hover {
+    background-color: #2563EB; /* Slightly darker blue */
+}</string>
+          </property>
+          <property name="text">
+           <string>All Media</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>14</width>
+            <height>14</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnAudio">
+          <property name="geometry">
+           <rect>
+            <x>190</x>
+            <y>10</y>
+            <width>81</width>
+            <height>36</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Manrope</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background-color: rgb(28, 28, 30);
+    color: #9ca3af; /* Gray-400 */
+    border: 1px solid rgba(255, 255, 255, 12); /* Subtle Border */
+    border-radius: 15px;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: 'Manrope';
+}
+
+QPushButton:hover {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 50); /* Brighter border on hover */
+    background-color: #18181b;
+}
+
+QPushButton:pressed {
+    background-color: #27272a;
+}</string>
+          </property>
+          <property name="text">
+           <string>Audio</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>14</width>
+            <height>14</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="files_page"/>
+      </widget>
+      <widget class="QLabel" name="version_ffmpeg_det">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>50</y>
+         <width>41</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Manrope SemiBold</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #4B5563;
+background-color: transparent;</string>
+       </property>
+       <property name="text">
+        <string>v1.0.0</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="highlight_bar" native="true">
+       <property name="geometry">
+        <rect>
+         <x>870</x>
+         <y>20</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* 1. The Container (Outer Shell) */
+#highlight_bar {
+    background-color: #1a1a1f;   /* Your requested container color */
+    border-radius: 25px;         /* Fully rounded outer edges */
+    border: 1px solid #2b2b2b;   /* Subtle border for the container */
+}
+
+/* 2. The Sliding Pill (Active Highlight) */
+/* Using QFrame selector ensures the radius is applied */
+QFrame#anim_pill {
+    background-color: #0f0f12;   /* Your requested active color */
+    border-radius: 18px;         /* radius must be &lt; container radius to fit */
+    border: 1px solid #333333;   /* Border around the pill */
+}
+
+/* 3. The Buttons */
+#btnNavDashboard, #btnNavHistory {
+    background: transparent;     
+    border: none;
+    color: #888888;              
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 18px;         /* Match the pill radius */
+}
+
+/* 4. Text Colors */
+#btnNavDashboard:hover, #btnNavHistory:hover {
+    color: #bbbbbb;
+}
+
+#btnNavDashboard:checked, #btnNavHistory:checked {
+    color: #ffffff;              
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="btnNavDashboard">
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string> Studio</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resources.qrc">
+            <normaloff>:/images/magic-wand.png</normaloff>:/images/magic-wand.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnNavHistory">
+          <property name="font">
+           <font>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string> History</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resources.qrc">
+            <normaloff>:/images/clock-gray.png</normaloff>:/images/clock-gray.png</iconset>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="mp4_icon_2">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>30</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Manrope SemiBold</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: white;
+border: none;
+outline: none;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/images/vac-logo.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="logo_text_4">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>30</y>
+         <width>41</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Manrope SemiBold</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+color: white;</string>
+       </property>
+       <property name="text">
+        <string>VAC</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="progressBar">
+       <property name="geometry">
+        <rect>
+         <x>870</x>
+         <y>80</y>
+         <width>260</width>
+         <height>10</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>10</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Manrope SemiBold</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QProgressBar {
+	background-color: rgb(28, 28, 30);
+    border: none;
+    border-radius: 4px; /* Rounded ends */
+    height: 6px; /* Force it to be thin */
+    text-align: center; /* Required property */
+    color: transparent; /* Hides the text inside the bar */
+}
+
+QProgressBar::chunk {
+    background-color: #0A84FF; /* The active blue bar */
+    border-radius: 3px;
+}</string>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+  <include location="../blur-aoi/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

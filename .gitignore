@@ -1,0 +1,6 @@
+.venv
+*.html
+__pycache__/
+*.spec
+build/
+dist/
