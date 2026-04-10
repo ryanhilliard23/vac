@@ -322,8 +322,7 @@ def download_media(url_or_search_term, mode='video', max_height=None, search_que
         'no_warnings': True,
         'overwrites': True,
         'ignoreerrors': True,
-        'writethumbnail': True,
-        'cookiesfrombrowser': ('chrome',), 
+        'writethumbnail': True, 
     }
     
     if FFMPEG_EXE_PATH:

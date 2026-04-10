@@ -2376,8 +2376,8 @@ if __name__ == "__main__":
             sys.argv.pop(1)      
             sys.argv[0] = "spotdl" 
             
-            from spotdl.console.entry_point import console_entry_point
-            console_entry_point()
+            # from spotdl.console.entry_point import console_entry_point
+            # console_entry_point()
             
         except Exception as e:
             print(f"[ERROR] Worker failed: {e}")
